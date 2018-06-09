@@ -1,2 +1,14 @@
+########## Eclipse ##########
+
+.classpath
+.settings/
+.project
+classes/
+bin/
+
+########### Maven ###########
+
+target/
+tmp/
 /target/
 /bin/
