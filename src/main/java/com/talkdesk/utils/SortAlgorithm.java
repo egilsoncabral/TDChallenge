@@ -7,7 +7,7 @@ package com.talkdesk.utils;
  * @author egilson
  * Interface created for generic implementation
  */
-public interface sortAlgorithm {
+public interface SortAlgorithm {
 
 	int[] sort (int[] numbers);
 	
