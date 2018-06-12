@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.talkdesk.main;
+package com.tdproject.main;
 
 /**
  * @author egilson
