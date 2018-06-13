@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 import com.tdproject.utils.FileHandlerUtils;
 import com.tdproject.utils.QuickSortAlgorithmImpl;
-import com.tdproject.validation.TelephoneValidation;
+import com.tdproject.validation.TelephoneNumberValidator;
 
 /**
  * @author egilson
@@ -18,12 +18,12 @@ public class BaseMainClass {
 
 	private FileHandlerUtils fileHandler;
 	
-	private TelephoneValidation telephoneValidation;
+	private TelephoneNumberValidator telephoneValidation;
 	
 	public BaseMainClass() {
 		super();
 		this.fileHandler = new FileHandlerUtils();
-		this.telephoneValidation = new TelephoneValidation();
+		this.telephoneValidation = new TelephoneNumberValidator();
 	}
 
 
