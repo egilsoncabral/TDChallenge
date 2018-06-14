@@ -4,7 +4,7 @@
 package com.tdproject.main;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import com.tdproject.utils.FileHandlerUtils;
 import com.tdproject.utils.QuickSortAlgorithmImpl;
@@ -28,15 +28,15 @@ public class BaseMainClass {
 
 
 
-	public void startProgram(String fileName){
+	public LinkedHashMap<String, Integer> startProgram(String fileName){
 		ArrayList<String> telephoneNumbers = fileHandler.fileReader(fileName);
 		fileHandler = new FileHandlerUtils(new QuickSortAlgorithmImpl());
 		ArrayList<String> areaCodes = fileHandler.fileReader("area_codes.txt");
-		telephoneValidation.validate(telephoneNumbers, fillMap(areaCodes));
+		return telephoneValidation.validate(telephoneNumbers, fillMap(areaCodes));
 	}
 	
-	private HashMap<String, Integer> fillMap(ArrayList<String> areaCodes){
-		HashMap<String, Integer> areaCodeMap = new HashMap<String, Integer>();
+	private LinkedHashMap<String, Integer> fillMap(ArrayList<String> areaCodes){
+		LinkedHashMap<String, Integer> areaCodeMap = new LinkedHashMap<String, Integer>();
 		for (String areaCode : areaCodes) {
 			areaCodeMap.put(areaCode, 0);
 		}
