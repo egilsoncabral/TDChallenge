@@ -25,7 +25,10 @@ public class MainClass {
 
 	private static void printAreaCodes(LinkedHashMap<String, Integer> countedAreaCodes) {
 		for (String code : countedAreaCodes.keySet()) {
-			System.out.println(code + ":" + countedAreaCodes.get(code).toString());
+			if (countedAreaCodes.get(code) > 0) {
+				System.out.println(code + ":" + countedAreaCodes.get(code).toString());	
+			}
+			
 
 		}
 
