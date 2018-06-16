@@ -11,16 +11,14 @@ import java.util.LinkedHashMap;
  */
 public class AreaCodeCounter {
 
-	private static StringBuilder areaCodeExtract;
+	private static StringBuilder areaCodeExtract = new StringBuilder();
 
 	public AreaCodeCounter() {
 		super();
-		areaCodeExtract = new StringBuilder();
 	}
 
 	public static void countAreaCode(String telephoneNumber, LinkedHashMap<String, Integer> areaCodes) {
 		String areaCodeAndTelephone = removeZerosAndPlus(telephoneNumber);
-		areaCodeAndTelephone.replace(" ", "");
 		int valueToCount = 1;
 		String areaCodeFound = findAreaCode(areaCodeAndTelephone, areaCodes);
 		if (areaCodeFound != null) {

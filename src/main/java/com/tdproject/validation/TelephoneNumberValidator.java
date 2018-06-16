@@ -25,6 +25,7 @@ public class TelephoneNumberValidator {
 	public LinkedHashMap<String, Integer> validate(ArrayList<String> telephoneList, LinkedHashMap<String, Integer> areaCodes) {
 		for (String telephoneNumber : telephoneList) {
 			if (!isWhiteSpaceOnSecondChar(telephoneNumber)) {
+				telephoneNumber = telephoneNumber.replaceAll("\\s+", "");
 				if (Pattern.matches(VALIDATE_NUMBER_PATTERN, telephoneNumber)) {
 					AreaCodeCounter.countAreaCode(telephoneNumber, areaCodes);
 				} 
