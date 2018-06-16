@@ -47,7 +47,7 @@ public class FileHandlerUtils {
 	          e.getMessage());
 	    }
 		if (sortAlgorithm != null) {
-			sortAlgorithm.sort(contentFile);
+			contentFile = sortAlgorithm.sort(contentFile);
 		}
 		return contentFile;
 	  }
