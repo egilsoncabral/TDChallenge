@@ -20,6 +20,8 @@ public class BaseMainClass {
 	private FileHandlerUtils fileHandler;
 
 	private TelephoneNumberValidator telephoneValidation;
+	
+	private final String AREA_CODE_FILENAME = "area_codes.txt";
 
 	/**
 	 * Standard constructor of class
@@ -38,7 +40,7 @@ public class BaseMainClass {
 	public LinkedHashMap<String, Integer> startProgram(String fileName) {
 		ArrayList<String> telephoneNumbers = fileHandler.fileReader(fileName);
 		fileHandler = new FileHandlerUtils(new QuickSortAlgorithmImpl());
-		ArrayList<String> areaCodes = fileHandler.fileReader("area_codes.txt");
+		ArrayList<String> areaCodes = fileHandler.fileReader(AREA_CODE_FILENAME);
 		return telephoneValidation.validate(telephoneNumbers, fillMap(areaCodes));
 	}
 

@@ -5,7 +5,6 @@ package com.tdproject.utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -42,7 +41,7 @@ public class FileHandlerUtils {
 	        
 	      }
 	      arq.close();
-	    } catch (IOException e) {
+	    } catch (Exception e) {
 	        System.err.printf("File opening error : %s.\n",
 	          e.getMessage());
 	    }

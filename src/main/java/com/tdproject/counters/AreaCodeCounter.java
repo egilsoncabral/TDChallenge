@@ -15,19 +15,12 @@ public class AreaCodeCounter {
 	private static StringBuilder areaCodeExtract;
 
 	/**
-	 * Standard constructor of the class
-	 */
-	public AreaCodeCounter() {
-		super();
-	}
-
-	/**
 	 * @param telephoneNumber
 	 * @param areaCodes
 	 * Used for count the area codes
 	 */
 	public static void countAreaCode(String telephoneNumber, LinkedHashMap<String, Integer> areaCodes) {
-		String areaCodeAndTelephone = removeZerosAndPlus(telephoneNumber);
+		String areaCodeAndTelephone = removeZerosAndSignal(telephoneNumber);
 		int valueToCount = 1;
 		String areaCodeFound = findAreaCode(areaCodeAndTelephone, areaCodes);
 		if (areaCodeFound != null) {
@@ -58,7 +51,7 @@ public class AreaCodeCounter {
 	 * @return telephone without "+" or "00"
 	 * Used for remove the sign of "+" and the zeros from the number
 	 */
-	private static String removeZerosAndPlus(String telephoneNumber) {
+	private static String removeZerosAndSignal(String telephoneNumber) {
 		if (telephoneNumber.startsWith("+")) {
 			telephoneNumber = telephoneNumber.substring(1, telephoneNumber.length());
 		} else if (telephoneNumber.startsWith("00") && telephoneNumber.length() > 3) {
