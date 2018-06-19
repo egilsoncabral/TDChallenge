@@ -1,6 +1,6 @@
 # TDChallenge
 
-One Paragraph of project description goes here
+This is a personal challenge project, whose purpose is to validate a file with phones and identify the appropriate area codes for each.
 
 ## Getting Started
 
@@ -8,13 +8,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To run the program, you will need to install jre at least version 6 onwards and add TDChallenge.0.0.1-SNAPSHOT.jar file to a directory on your local machine, along with a text file with the phone numbers, following the pattern:
 
 ```
-Give examples
++351960000000
+00351960000000
++00112
 ```
 
-### Installing
+### Executing
 
 A step by step series of examples that tell you how to get a development env running
 
@@ -58,9 +60,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -72,13 +72,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **Egilson Cabral** - [TDChallenge](https://github.com/egilsoncabral/TDChallenge)
 
 ## Acknowledgments
 
