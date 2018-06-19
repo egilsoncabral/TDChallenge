@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run the project, you will need to clone it to your workspace and have jdk installed at least in version 6 onwards and have the maven for build it. In addition, you will need to create a text file with the phone numbers in the project's root directory with the following pattern:
+To run the project, you will need to clone it to your workspace and have jdk installed at least in version 7 onwards and have the maven for build it. In addition, you will need to create a text file with the phone numbers in the project's root directory with the following pattern:
 
 ```
 +351960000000
