@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run the project, you will need to clone it to your workspace and have jdk installed at least in version 7 onwards and have the maven for build it. In addition, you will need to create a text file with the phone numbers in the project's root directory with the following pattern:
+To run the project, you will need to clone it to your workspace and have jdk installed at least in version 7 onwards and have the Maven for build it. In addition, you will need to create a text file with the phone numbers in the project's root directory with the following pattern:
 
 ```
 +351960000000
@@ -19,7 +19,7 @@ Finally, copy the file area_codes.txt that you can find on github repository of 
 
 ### Executing
 
-To run the program, you will have two options, the first will be through the configuration of running your IDE, informing as the initialization parameter, the name of the phone file, for example:
+To run the program, you will have to the configurate of running on your IDE, informing as the initialization parameter, the name of the phone file, for example:
 
 ```
 arquivo_telefones.txt
@@ -31,6 +31,7 @@ The output of the program will be the number of valid area codes in a sequential
 55:2
 341:5
 ```
+To run directly by jar package, check the deployment section below.
 
 ## Running the tests
 
