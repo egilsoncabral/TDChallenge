@@ -82,6 +82,7 @@ For deploy this application, get the file TDChallenge-0.0.1-SNAPSHOT.jar generat
 ```
 java -jar TDChallenge-0.0.1-SNAPSHOT.jar arquivo_telefones.txt
 ```
+P.S: You will need to have installed the JRE 7 at least on your machine.
 
 ## Built With
 
