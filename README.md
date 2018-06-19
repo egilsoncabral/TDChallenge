@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To run the program, you will need to install jre at least version 6 onwards and add TDChallenge.0.0.1-SNAPSHOT.jar file to a directory on your local machine, along with a text file with the phone numbers, following the pattern:
+To run the project, you will need to clone it to your workspace and have jdk installed at least in version 6 onwards and have the maven for build it. In addition, you will need to create a text file with the phone numbers in the project's root directory with the following pattern:
 
 ```
 +351960000000
@@ -18,25 +18,29 @@ To run the program, you will need to install jre at least version 6 onwards and 
 
 ### Executing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+To run the program, you will have two options, the first will be through the configuration of running your IDE, informing as the initialization parameter, the name of the phone file, for example:
 
 ```
-Give the example
+arquivo_telefones.txt
 ```
 
-And repeat
+the second way, is generating the TDChallenge-0.0.1-SNAPSHOT.jar file in the project's target folder and copying that file to a chosen directory along with the phone file. After doing this run the java as follows:
 
 ```
-until finished
+java -jar TDChallenge-0.0.1-SNAPSHOT.jar arquivo_telefones.txt
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+The output of the program will be the number of valid area codes in a sequential way, as in the example below:
+
+```
+1:3
+55:2
+341:5
+```
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run the tests, you can through your IDE send the command to run all the unit tests of the project in the junit tests menu. Anyway, the tests will run automatically when building the project through Maven.
 
 ### Break down into end to end tests
 
