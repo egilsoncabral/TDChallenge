@@ -15,6 +15,7 @@ To run the project, you will need to clone it to your workspace and have jdk ins
 00351960000000
 +00112
 ```
+Finally, copy the file area_codes.txt to the root directory of the project as well.
 
 ### Executing
 
@@ -24,7 +25,7 @@ To run the program, you will have two options, the first will be through the con
 arquivo_telefones.txt
 ```
 
-the second way, is generating the TDChallenge-0.0.1-SNAPSHOT.jar file in the project's target folder and copying that file to a chosen directory along with the phone file. After doing this run the java as follows:
+the second way, is generating the TDChallenge-0.0.1-SNAPSHOT.jar file in the project's target folder and copying that file to a chosen directory along with the phone file and area_codes.txt. After doing this run the java as follows:
 
 ```
 java -jar TDChallenge-0.0.1-SNAPSHOT.jar arquivo_telefones.txt
@@ -44,19 +45,42 @@ To run the tests, you can through your IDE send the command to run all the unit 
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+The tests were configured to test from the sorting algorithm such as:
 
 ```
-Give an example
+	@Test
+	public void sortTest() {
+		QuickSortAlgorithmImpl quickSort = new QuickSortAlgorithmImpl();
+		ArrayList<String> numberList = new ArrayList<>();
+		numberList.add("10");
+		numberList.add("3");
+		numberList.add("6");
+		ArrayList<String> result = quickSort.sort(numberList);
+		Assert.assertEquals(result.get(0), "3");
+		Assert.assertEquals(result.get(1), "6");
+		Assert.assertEquals(result.get(2), "10");
+	}
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
+Even the validation algorithm, such as:
 
 ```
-Give an example
+@Test
+	public void validateTelephoneNumberTest() {
+		String telephone1 = "+559988 12 34   55";
+		String telephone2 = "+ 112";
+		ArrayList<String> telephoneList = new ArrayList<>();
+		LinkedHashMap<String, Integer> areaCodes = new LinkedHashMap<String, Integer>();
+		telephoneList.add(telephone1);
+		telephoneList.add(telephone2);
+		areaCodes.put("1", 0);
+		areaCodes.put("55", 0);
+		TelephoneNumberValidator telephoneNumberValidator = new TelephoneNumberValidator();
+		LinkedHashMap<String, Integer> result = telephoneNumberValidator.validate(telephoneList, areaCodes);
+		Assert.assertEquals(result.get("1").toString(), "0");
+		Assert.assertEquals(result.get("55").toString(), "1");
+	}
 ```
+Having coverage above 92% of code
 
 ## Deployment
 
@@ -66,21 +90,11 @@ Add additional notes about how to deploy this on a live system
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For versioning, i used the gitHub platform. For more details, (https://github.com/)
 
 ## Authors
 
 * **Egilson Cabral** - [TDChallenge](https://github.com/egilsoncabral/TDChallenge)
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
