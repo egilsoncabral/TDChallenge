@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.tdprojects.test.counters;
+package com.tdproject.test.counters;
 
 import java.util.LinkedHashMap;
 
